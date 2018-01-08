@@ -44,5 +44,9 @@
  是否添加边框
  **/
 @property (nonatomic,assign)BOOL isShowBorder;
+/**
+ 默认选中的item
+ **/
+@property (nonatomic,assign)NSInteger selectedItem;
 
 @end

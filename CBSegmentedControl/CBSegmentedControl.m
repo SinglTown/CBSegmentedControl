@@ -28,12 +28,17 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.selectedItem = 0;
         [self setAllViews];
     }
     return self;
 }
 -(void)setAllViews
 {
+    if (self.titles.count == 0) {
+        return;
+    }
+    
     CGFloat width = self.frame.size.width/self.titles.count;
     CGFloat height = self.frame.size.height;
     
@@ -64,14 +69,14 @@
     }
     
     //移动的背景
-    self.backView.frame = CGRectMake(0, 0, width, height);
+    self.backView.frame = CGRectMake(self.selectedItem*width, 0, width, height);
     self.backView.backgroundColor = self.selectedBackColor ? self.selectedBackColor : [UIColor grayColor];
     self.backView.layer.cornerRadius = height/2;
     self.backView.clipsToBounds = YES;
     [self addSubview:self.backView];
     
     //再添加一层view,放置未选中状态下的label
-    UIView *topBackView = [[UIView alloc] initWithFrame:self.bounds];
+    UIView *topBackView = [[UIView alloc] initWithFrame:CGRectMake(-self.selectedItem*width, 0, width, height)];
     topBackView.backgroundColor = [UIColor clearColor];
     [self.backView addSubview:topBackView];
     self.backLabelTopView = topBackView;
@@ -101,7 +106,15 @@
         [self.delegate segmentedControlSeletedIndex:tap.view.tag];
     }
 }
-
+-(void)setSelectedItem:(NSInteger)selectedItem
+{
+    _selectedItem = selectedItem;
+    
+    if (self.titles && self.titles.count > 0) {
+        [self removeFromSuperview];
+        [self setAllViews];
+    }
+}
 -(void)setTitles:(NSArray *)titles
 {
     _titles = titles;
