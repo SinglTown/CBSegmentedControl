@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "CBSegmentedControl.h"
+@interface ViewController () <CBSegmentedControlDelegate>
 
 @end
 
@@ -16,9 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    CBSegmentedControl *seg = [[CBSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, 150, 30)];
+    seg.center = CGPointMake(self.view.frame.size.width/2, 100);
+    seg.segBackColor = [UIColor purpleColor];
+    seg.selectedBackColor = [UIColor orangeColor];
+    seg.nonSelectedColor = [UIColor yellowColor];
+    seg.selectedTextColor = [UIColor redColor];
+    seg.titles = @[@"男频",@"女频"];
+    seg.delegate = self;
+    [self.view addSubview:seg];
+    
 }
-
+-(void)segmentedControlSeletedIndex:(NSInteger)index
+{
+    NSLog(@"点击了第%ld个item",index);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

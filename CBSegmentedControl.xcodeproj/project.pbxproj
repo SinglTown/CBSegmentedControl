@@ -15,6 +15,8 @@
 		FFD32843200303F20018D8C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD32842200303F20018D8C9 /* main.m */; };
 		FFD3284D200303F30018D8C9 /* CBSegmentedControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD3284C200303F30018D8C9 /* CBSegmentedControlTests.m */; };
 		FFD32858200303F30018D8C9 /* CBSegmentedControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD32857200303F30018D8C9 /* CBSegmentedControlUITests.m */; };
+		FFD32867200304160018D8C9 /* CBSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD32866200304160018D8C9 /* CBSegmentedControl.m */; };
+		FFD3286D200313740018D8C9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD3286C200313740018D8C9 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		FFD32853200303F30018D8C9 /* CBSegmentedControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBSegmentedControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD32857200303F30018D8C9 /* CBSegmentedControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSegmentedControlUITests.m; sourceTree = "<group>"; };
 		FFD32859200303F30018D8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD32865200304160018D8C9 /* CBSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBSegmentedControl.h; sourceTree = "<group>"; };
+		FFD32866200304160018D8C9 /* CBSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBSegmentedControl.m; sourceTree = "<group>"; };
+		FFD3286B200313740018D8C9 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		FFD3286C200313740018D8C9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,14 @@
 		FFD32832200303F20018D8C9 /* CBSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				FFD3286B200313740018D8C9 /* UIView+Frame.h */,
+				FFD3286C200313740018D8C9 /* UIView+Frame.m */,
 				FFD32833200303F20018D8C9 /* AppDelegate.h */,
 				FFD32834200303F20018D8C9 /* AppDelegate.m */,
 				FFD32836200303F20018D8C9 /* ViewController.h */,
 				FFD32837200303F20018D8C9 /* ViewController.m */,
+				FFD32865200304160018D8C9 /* CBSegmentedControl.h */,
+				FFD32866200304160018D8C9 /* CBSegmentedControl.m */,
 				FFD32839200303F20018D8C9 /* Main.storyboard */,
 				FFD3283C200303F20018D8C9 /* Assets.xcassets */,
 				FFD3283E200303F20018D8C9 /* LaunchScreen.storyboard */,
@@ -266,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD32838200303F20018D8C9 /* ViewController.m in Sources */,
+				FFD32867200304160018D8C9 /* CBSegmentedControl.m in Sources */,
 				FFD32843200303F20018D8C9 /* main.m in Sources */,
+				FFD3286D200313740018D8C9 /* UIView+Frame.m in Sources */,
 				FFD32835200303F20018D8C9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
