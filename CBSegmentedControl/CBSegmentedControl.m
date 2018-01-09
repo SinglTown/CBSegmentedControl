@@ -111,8 +111,10 @@
     _selectedItem = selectedItem;
     
     if (self.titles && self.titles.count > 0) {
-        [self removeFromSuperview];
-        [self setAllViews];
+        CGFloat width = self.frame.size.width/self.titles.count;
+        self.backView.left = selectedItem*width;
+        self.backLabelTopView.left = -selectedItem*width;
+        [self.backView layoutIfNeeded];
     }
 }
 -(void)setTitles:(NSArray *)titles

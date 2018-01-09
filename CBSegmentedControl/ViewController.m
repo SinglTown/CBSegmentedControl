@@ -25,8 +25,10 @@
     seg.selectedBackColor = [UIColor orangeColor];
     seg.nonSelectedColor = [UIColor yellowColor];
     seg.selectedTextColor = [UIColor redColor];
-    seg.selectedItem = 1;
+    
     seg.titles = @[@"男频",@"女频"];
+    
+    seg.selectedItem = 1;
     seg.delegate = self;
     [self.view addSubview:seg];
     
